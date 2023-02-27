@@ -8,17 +8,17 @@ public class Main {
         GameProgress gameProgress2 = new GameProgress(98, 11, 4, 574.74);
         GameProgress gameProgress3 = new GameProgress(75, 15, 9, 822.22);
 
-        saveGame("Games/savegames/save1.dat", gameProgress1);
-        saveGame("Games/savegames/save2.dat", gameProgress2);
-        saveGame("Games/savegames/save3.dat", gameProgress3);
+        saveGame("C://Games/savegames/save1.dat", gameProgress1);
+        saveGame("C://Games/savegames/save2.dat", gameProgress2);
+        saveGame("C://Games/savegames/save3.dat", gameProgress3);
 
-        String[] fileNames = {"Games/savegames/save1.dat",
-                "Games/savegames/save2.dat",
-                "Games/savegames/save3.dat"};
+        String[] fileNames = {"C://Games/savegames/save1.dat",
+                "C://Games/savegames/save2.dat",
+                "C://Games/savegames/save3.dat"};
 
-        zipFiles("Games/savegames/zip.zip", fileNames);
+        zipFiles("C://Games/savegames/zip.zip", fileNames);
 
-        File savegames = new File("Games/savegames");
+        File savegames = new File("C://Games/savegames");
         for (File file : savegames.listFiles()) {
             if (!file.getPath().endsWith(".zip")) {
                 file.delete();
